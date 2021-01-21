@@ -1,0 +1,33 @@
+<h1>Departamentos</h1>
+<div>
+  <a [href]="'/add-category'">
+    <input type="button" class="btn btn-primary" value="Agregar" />
+  </a>
+</div>
+<br />
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">C&oacute;digo</th>
+      <th scope="col">Descripci&oacute;n</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let department of departments">
+    <tr>
+      <td>{{department.code}}</td>
+      <td>{{department.description}}</td>
+      <td>
+        <a [href]="'/edit-category/' + category.id">
+          <input type="button" class="btn btn-warning" value="Editar" />
+        </a>
+      </td>
+      <td>
+        <a [href]="'/delete-category/' + category.id">
+          <input type="button" class="btn btn-danger" value="Eliminar" />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
